@@ -1,0 +1,6 @@
+# requirements.txt
+requests
+httpx
+pandas
+numpy
+tabulate
