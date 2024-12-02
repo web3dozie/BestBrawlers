@@ -1,7 +1,7 @@
-import asyncio, httpx, json, pandas as pd, numpy as np
-
 from tabulate import tabulate
 from token_manager import TokenManager
+
+import asyncio, httpx, json, pandas as pd, numpy as np
 
 # Game modes dictionary
 GAME_MODES = {
@@ -265,7 +265,7 @@ def process_and_display_data(all_data, map_name, mode, brawlers_to_remove):
     result = result.sort_values('Score', ascending=False)
 
     # **Add this line to filter rows where 'Score' >= 1**
-    result = result[result['Score'] >= 5]
+    # result = result[result['Score'] >= 5]
 
     # Format numerical columns as strings with two decimal places
     result['Win Rate %'] = result['Win Rate %'].map('{:.2f}'.format)
